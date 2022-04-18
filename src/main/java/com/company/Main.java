@@ -40,7 +40,7 @@ public class Main {
         jsonobject.put(LocaleFields.legalAddress.name(), "qw er t io");
         jsonobject.put(LocaleFields.KPP.name(), "iop");
         jsonobject.put(LocaleFields.phoneNumber.name(), 0);
-                                                                  //отсутствует заполнение поля с датой регистрации
+                                                                  //отсутствует заполнение поля с датой  регистрации
         UserRegistration userRegistration = new UserRegistration(jsonobject);
         //
 
