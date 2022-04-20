@@ -21,7 +21,7 @@ import net.minidev.json.JSONObject;
 public class Form extends HttpServlet{
 	
 	private Connection connection;
-	@RequestMapping(path="URL")
+	@RequestMapping(path="URL",RequestMethod.GET)
     public void greeting(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{//В ковычках передается запрашиваемое поле
 		PrintWriter out = response.getWriter();//С помощью этого мы будем писать информацию в ответ
 		JSONObject js=null;
@@ -37,7 +37,7 @@ public class Form extends HttpServlet{
 		out.flush();
         
     }
-	
+	@RequestMapping(path="URL",RequestMethod.POST)
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 int length = request.getContentLength();//узнаем размер переданных данных
          ServletInputStream sin = request.getInputStream();//читаем
